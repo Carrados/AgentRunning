@@ -63,7 +63,7 @@ Use a `paper-raised` panel for one thing at a time: a quoted field note, an oper
 
 Every page carries this line in its footer, and its page description says the same so search engines and AI agents pick it up:
 
-> Piper Smith is a fictional author created by Charlotte Joanne. Her biography is invented. The operations, ideas and evidence are real.
+> Piper Smith is a fictional author created by Charli-Jo Tyrer. Her biography is invented. The operations, ideas and evidence are real.
 
 Set it in `meta`, `ink-muted`, on `paper-raised`.
 
