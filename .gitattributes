@@ -1,0 +1,2 @@
+# Keep LF line endings on every platform, so worker.js builds the same on Windows as anywhere else.
+* text=auto eol=lf
