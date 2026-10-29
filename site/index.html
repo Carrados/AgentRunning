@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Agent Running</title>
-<meta name="description" content="Agent Running: field notes and the San Francisco Rules, on running AI agents with fixed limits and responsibility kept by the person who sends them. Written as Piper Smith, a fictional author created by Charli-Jo Tyrer; the operations, ideas and evidence are real. Coming soon.">
-<meta property="og:title" content="Agent Running">
-<meta property="og:description" content="Field notes on running AI agents, and the San Francisco Rules that come out of them. Coming soon.">
+<title>The Five-Dollar Open Bar · Agent Running</title>
+<meta name="description" content="The Five-Dollar Open Bar: Piper Smith on giving Cloudflare an uncapped card, budget alerts, and one AI agent told only to report. Field notes and the San Francisco Rules on running AI agents. Piper Smith is a fictional author created by Charli-Jo Tyrer; the operations, ideas and evidence are real.">
+<meta property="og:title" content="The Five-Dollar Open Bar · Agent Running">
+<meta property="og:description" content="Five dollars a month, an open bar, and one agent watching the bill. Rule 1 of the San Francisco Rules.">
 <meta name="theme-color" content="#1c2c4c">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%231c2c4c'/%3E%3Ctext x='16' y='21' text-anchor='middle' font-family='Georgia,serif' font-weight='700' font-size='13' fill='%23f5efe3'%3EP.S.%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,22 +51,122 @@
   .signature { font-style: italic; color: var(--navy-text); }
   footer { margin-top: var(--space-6); background: var(--paper-raised); padding: var(--space-3) var(--space-4); font-family: var(--font-mono); font-size: 13px; line-height: 20px; color: var(--ink-muted); }
   footer p { margin: 0; }
+  .wordmark a { color: inherit; text-decoration: none; }
+  .meta { margin: 0 0 var(--space-4); font-family: var(--font-mono); font-size: 13px; line-height: 20px; color: var(--ink-muted); }
+  .title { margin: 0 0 var(--space-2); font-family: var(--font-display); font-weight: 400; font-size: clamp(32px, 7vw, 40px); line-height: 1.1; color: var(--ink); text-wrap: balance; }
+  h2 { margin: var(--space-5) 0 var(--space-3); font-family: var(--font-serif); font-size: 22px; line-height: 1.3; font-weight: 600; }
+  table { border-collapse: collapse; margin: 0 0 var(--space-3); background: var(--paper-raised); font-family: var(--font-mono); font-size: 15px; }
+  th, td { padding: var(--space-2) var(--space-4); text-align: left; border-bottom: 1px solid var(--hairline); }
+  th { font-weight: 500; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+  td + td, th + th { text-align: right; }
+  .rule { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--hairline); display: grid; grid-template-columns: auto 1fr; gap: 0 var(--space-4); }
+  .numeral { font-family: var(--font-display); font-size: 64px; line-height: 1; color: var(--international-orange); }
+  .rule h2 { margin: 0 0 var(--space-3); }
+  .rule .closing { margin-bottom: 0; }
+  @media (max-width: 480px) { .rule { grid-template-columns: 1fr; } .numeral { margin-bottom: var(--space-2); } }
+  .postscript { display: flex; align-items: flex-start; gap: var(--space-3); margin-top: var(--space-6); }
+  .postscript p { margin: 0; }
+  .postscript .ps { flex: none; }
+  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  a:focus-visible { outline: 2px solid var(--navy-text); outline-offset: 2px; }
 </style>
 </head>
 <body>
 <div class="page">
   <header>
-    <h1 class="wordmark">Agent Running</h1>
+    <p class="wordmark"><a href="/">Agent Running</a></p>
   </header>
   <main>
-    <p class="label">Coming soon</p>
-    <p class="lede">Field notes on running AI agents, and the San Francisco Rules that come out of them.</p>
-    <p>Tradecraft is judgement under uncertainty. You take reasonable precautions, limit the exposure and accept that some risk remains.</p>
-    <p class="closing">You can delegate the operation. You cannot delegate responsibility for sending it.</p>
-    <div class="sign">
-      <div class="ps" role="img" aria-label="P.S.">P.S.</div>
-      <span class="signature">Piper Smith</span>
-    </div>
+    <article>
+      <p class="label">Field note · San Francisco · October 2026</p>
+      <h1 class="title">The Five-Dollar Open Bar</h1>
+      <p class="meta">The San Francisco Rules · Piper Smith</p>
+
+      <p>I moved SF Rules to Cloudflare at the weekend.</p>
+      <p>Started on the free plan. By day two I was impressed enough to upgrade to Workers Paid. Five dollars a month. Rather less than a decent coffee in San Francisco.</p>
+      <p>There was one thing I didn't much like.</p>
+      <p>Cloudflare wanted a payment method and my agreement to pay automatically for any additional usage. No upper limit. Just a standing invitation to take whatever I owed them.</p>
+      <p>Five dollars a month, with an open bar.</p>
+      <p>Now, there's a lot of talk about rogue AI agents, runaway processes and swarms of autonomous things doing things nobody actually asked them to do. Most of it is rather more exciting than anything likely to happen to my little website.</p>
+      <p>But I was about to give Cloudflare permission to charge my card without asking me again.</p>
+      <p>How much trouble could I realistically get into?</p>
+
+      <h2>First, the numbers</h2>
+      <p>Workers Paid includes 10 million requests a month. Beyond that, it's $0.30 per million requests.</p>
+      <p>That's thirty cents. For a million.</p>
+      <p>To put that into perspective:</p>
+      <table>
+        <thead><tr><th scope="col">Additional requests</th><th scope="col">Additional cost</th></tr></thead>
+        <tbody>
+          <tr><td>1 million</td><td>$0.30</td></tr>
+          <tr><td>10 million</td><td>$3</td></tr>
+          <tr><td>100 million</td><td>$30</td></tr>
+          <tr><td>1 billion</td><td>$300</td></tr>
+        </tbody>
+      </table>
+      <p>Those are request charges, not the whole bill. Workers also charge for CPU time above the included allowance, and other Cloudflare services have their own pricing.</p>
+      <p>Still, a billion additional requests would be quite an achievement for SF Rules. I'd be delighted with the readership, although I might have a few questions about where they were all coming from.</p>
+      <p>The risk is real. It's also fairly small.</p>
+      <p>That doesn't mean ignore it.</p>
+
+      <h2>Someone watching the purse</h2>
+      <p>Cloudflare lets you set budget alerts.</p>
+      <p>I set mine at $10, $20, $30, $40 and $50.</p>
+      <p>Why five alerts? Because I haven't done this before. I don't know what normal usage looks like yet, and I'd rather have too much information at the beginning than too little.</p>
+      <p>Then I gave Instinct, my personal AI agent, a job.</p>
+      <p>Watch my inbox. Every time an email arrives from Cloudflare, send me a WhatsApp message.</p>
+      <p>Not just budget warnings. Every email.</p>
+      <p>I don't know what Cloudflare's warning messages look like, and I couldn't see much point in guessing. Once I've seen a few, I'll tell Instinct which ones can be ignored.</p>
+      <p>For now, every message gets reported.</p>
+      <p>That's the whole operation.</p>
+      <p>No elaborate monitoring dashboard. No second agent supervising the first. No committee of artificial intelligences debating whether thirty dollars constitutes an emergency.</p>
+      <p class="closing">One agent. One inbox. One instruction.</p>
+
+      <h2>What I've actually bought</h2>
+      <p>Not protection.</p>
+      <p>Cloudflare's budget alerts don't stop the bill. Nor are they instantaneous. Usage can accumulate before a warning arrives.</p>
+      <p>Instinct isn't authorised to shut anything down, dispute charges or decide how much money I'm allowed to spend.</p>
+      <p>All it can do is tell me something has happened.</p>
+      <p>And that's useful.</p>
+      <p>If my bill reaches $10, I want to know. If it reaches $20, I'll probably investigate. At $50, I'll certainly want an explanation.</p>
+      <p>But I haven't told Cloudflare to stop serving my website, and I haven't told Instinct to start making decisions for me.</p>
+      <p>I've retained that job.</p>
+
+      <h2>And if it all goes wrong?</h2>
+      <p>Then I'll have a problem to solve.</p>
+      <p>I could have stayed on the free plan. I could refuse to use anything that involved an uncapped financial commitment. I could spend the next fortnight constructing an elaborate collection of safeguards against a catastrophe that is statistically unlikely and financially manageable.</p>
+      <p>Or I could pay the five dollars, understand the pricing and arrange to be told if something unusual happens.</p>
+      <p>I chose the latter.</p>
+      <p>There's a peculiar habit developing around AI agents of treating every imaginable failure as an argument against doing anything.</p>
+      <p>I don't buy it.</p>
+      <p>Risk is not a reason to abandon an operation. It's something you assess, accept where appropriate, and manage.</p>
+      <p>There is a difference between being reckless and being prepared to discover that you were wrong.</p>
+      <p>This arrangement might prove inadequate. If it does, I'll improve it. Meanwhile, SF Rules is running on infrastructure that would have been unimaginable for a small independent publisher not very long ago, and it costs me five dollars a month.</p>
+      <p>I think that's rather wonderful.</p>
+      <p>Besides, there's something mildly amusing about employing an AI agent to warn me about the potential cost of running AI agents.</p>
+      <p>I haven't eliminated the risk.</p>
+      <p>I've given myself a better chance of noticing it.</p>
+      <p>Five dollars a month. Open bar. Someone watching the bill.</p>
+      <p class="closing">That'll do for now.</p>
+
+      <section class="rule" aria-labelledby="rule-1">
+        <div class="numeral" aria-hidden="true">1</div>
+        <div>
+          <p class="label">Rule 1 · Draft 2026</p>
+          <h2 id="rule-1"><span class="vh">Rule 1: </span>Let the agent report. Keep the decision.</h2>
+          <p>Give it one inbox and one instruction. It tells me what happened. What happens next is mine.</p>
+          <p class="closing">An agent reports. You decide.</p>
+        </div>
+      </section>
+
+      <div class="postscript">
+        <div class="ps" role="img" aria-label="P.S.">P.S.</div>
+        <div>
+          <p>Instinct reported its first Cloudflare email before I'd finished giving it the job. Showing initiative at the briefing stage. I've run agents like that. You keep an eye on them.</p>
+          <p class="signature">Piper Smith</p>
+        </div>
+      </div>
+    </article>
   </main>
   <footer>
     <p>Piper Smith is a fictional author created by Charli-Jo Tyrer. Her biography is invented. The operations, ideas and evidence are real.</p>
