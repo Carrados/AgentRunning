@@ -5,7 +5,7 @@ Tradecraft is judgement under uncertainty. The design should feel the same: plai
 ## Names
 
 - Set the masthead as **Agent Running**, in `wordmark`, `international-orange`.
-- The icon is the **P.S. mark**: the letters "P.S." in `serif` at 600 weight, `on-navy` on a `navy` fill, `radius-md` corners. Use it as the site icon, the social image badge and at the foot of a piece. It takes the place the bridge has in the San Francisco Rules. See the PSMark component.
+- The icon is the **P.S. mark**: the letters "P.S." in `serif` at 600 weight, `on-navy` on a `navy` fill, `radius-md` corners. Use it as the site icon, the social image badge, small (28px) beside Piper's name in each piece's byline, and at the foot of a piece to open the postscript. Meeting it in the byline first teaches readers that P.S. is Piper Smith, so the postscript lands as both. It takes the place the bridge has in the San Francisco Rules. See the PSMark component.
 - Refer to the rules as **The San Francisco Rules**, or **SF Rules** after first use. In running text they are Piper's ("my rules"), never a product.
 - Piper signs as **P.S.** Set it in `signature`, `navy-text`.
 
@@ -33,6 +33,8 @@ Use a `paper-raised` panel for one thing at a time: a quoted field note, an oper
 
 - `paper` is the ground. `ink` is the text. Most of every page is these two.
 - `international-orange` is for the wordmark, rule numerals and nothing else large. As text under 24px, use `orange-text`.
+- `international-orange` (#c0362c) is the Golden Gate Bridge's own colour. It reads as brick or faded vermilion rather than safety orange; that is intended. The bridge stays in the system as a colour, never as a picture.
+- Keep navy. It is Piper's colour and the deliberate second accent; do not fold it into charcoal or orange.
 - `navy` and `navy-text` are Piper's: her signature, the P.S. mark, links and the focus ring. Orange speaks for the rules; navy speaks for her.
 - Blue and orange stay distinguishable for colour-blind readers. Keep that pairing; do not introduce red and green as a pair.
 - `hairline` is decoration only. Anything a reader must notice gets a real colour.
@@ -42,7 +44,7 @@ Use a `paper-raised` panel for one thing at a time: a quoted field note, an oper
 
 - `display` (Libre Caslon Display) for the wordmark, titles and rule numerals. Never for running text.
 - `serif` (Source Serif 4) for everything people read: rule titles, body, closing lines, the signature.
-- `mono` (IBM Plex Mono) for labels and operational metadata: dates, file references, allowances, costs. It is the field-report voice. Keep it small.
+- `mono` (IBM Plex Mono) for labels and operational metadata: dates, file references, allowances, costs. It is the field-report voice. Keep it small but never tiny: labels at 14px, bylines, meta lines and the disclosure at 15px.
 - Load all three from Google Fonts. Each family has a system fallback in `type.families`.
 - Keep running text near 65 characters a line.
 
@@ -50,6 +52,8 @@ Use a `paper-raised` panel for one thing at a time: a quoted field note, an oper
 
 - One column of text, left-aligned, with generous `paper` around it. Never centre body copy.
 - Masthead at the top: the wordmark, then a single `hairline` rule, then `space-6`.
+- On phones the piece title must be the largest text on the page: the wordmark scales down (to 28px) and the title stays at 34px or more.
+- Put `space-6` above each section heading in a piece, so a long page on a phone breaks into findable sections.
 - Keep a side gutter of at least `space-3` on phones.
 - Square corners (`radius-none`) everywhere except controls (`radius-sm`) and the P.S. mark (`radius-md`).
 
