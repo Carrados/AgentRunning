@@ -29,6 +29,10 @@ Tradecraft is judgement under uncertainty. The design should feel the same: plai
 
 Use a `paper-raised` panel for one thing at a time: a quoted field note, an operational figure, or the disclosure.
 
+## Updates
+
+Never rewrite a published piece to absorb what happened next. Add a dated update after the P.S.: a `paper-raised` panel headed in `label` style, `orange-text` ("Update · 30 October 2026", a real heading with a `time` element), body in `body`, ending on a `closing-line`. Later updates stack below in their own panels, newest last, so each piece carries its own log.
+
 ## Colour
 
 - `paper` is the ground. `ink` is the text. Most of every page is these two.
