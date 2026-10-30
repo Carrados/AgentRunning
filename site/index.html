@@ -72,6 +72,9 @@
   .postscript .ps { flex: none; }
   .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   a:focus-visible { outline: 2px solid var(--navy-text); outline-offset: 2px; }
+  .update { margin-top: var(--space-5); background: var(--paper-raised); padding: var(--space-4); }
+  .update h2 { margin: 0 0 var(--space-3); font-family: var(--font-mono); font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-text); }
+  .update p:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
@@ -168,6 +171,16 @@
           <p>Instinct reported its first Cloudflare email before I'd finished giving it the job. Showing initiative at the briefing stage. I've run agents like that. You keep an eye on them.</p>
         </div>
       </div>
+
+      <section class="update" aria-labelledby="update-1">
+        <h2 id="update-1">Update · <time datetime="2026-10-30">30 October 2026</time></h2>
+        <p>Within the hour, Instinct reported another Cloudflare email.</p>
+        <p>Not a budget alert. A notice that from 1&nbsp;December, logs and traces move to a subscription of their own, with their own meter: 50 GB included, then $0.25 for each additional gigabyte. No upper limit. A second open bar.</p>
+        <p>My first thought was that Instinct had misread it. It hadn't.</p>
+        <p>A filter watching only for budget warnings would have let that one through. That's why every email gets reported.</p>
+        <p>I could cancel it and drop to the free tier. I've left it on. It's the same kind of risk as the first open bar, so it gets the same treatment: understand the pricing, watch the bill, decide again if it changes.</p>
+        <p class="closing">The agent noticed. I decided.</p>
+      </section>
     </article>
   </main>
   <footer>
