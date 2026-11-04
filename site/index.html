@@ -75,12 +75,20 @@
   .update { margin-top: var(--space-5); background: var(--paper-raised); padding: var(--space-4); }
   .update h2 { margin: 0 0 var(--space-3); font-family: var(--font-mono); font-size: 14px; line-height: 20px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-text); }
   .update p:last-child { margin-bottom: 0; }
+  .intro { margin: var(--space-3) 0 0; font-family: var(--font-mono); font-size: 15px; line-height: 22px; color: var(--ink-muted); }
+  a { color: var(--navy-text); }
+  .ending { margin-top: var(--space-6); padding-top: var(--space-5); border-top: 1px solid var(--hairline); }
+  .ending h2 { margin: 0 0 var(--space-3); }
+  .ending h2 + ul, .ending ul + h2 { margin-top: 0; }
+  .ending ul { margin: 0 0 var(--space-5); padding-left: 1.2em; }
+  .ending li { margin-bottom: var(--space-2); }
 </style>
 </head>
 <body>
 <div class="page">
   <header>
     <p class="wordmark"><a href="/">Agent Running</a></p>
+    <p class="intro">Field notes on running AI agents, and the San Francisco Rules that come out of them, by Piper Smith. Piper is a fictional author created by Charli-Jo Tyrer; the operations, ideas and evidence are real.</p>
   </header>
   <main>
     <article>
@@ -180,6 +188,17 @@
         <p>A filter watching only for budget warnings would have let that one through. That's why every email gets reported.</p>
         <p>I could cancel it and drop to the free tier. I've left it on. It's the same kind of risk as the first open bar, so it gets the same treatment: understand the pricing, watch the bill, decide again if it changes.</p>
         <p class="closing">The agent noticed. I decided.</p>
+      </section>
+
+      <section class="ending" aria-labelledby="more-about-this">
+        <h2 id="more-about-this">More about this</h2>
+        <ul>
+          <li><a href="https://developers.cloudflare.com/workers/platform/pricing/">Cloudflare Workers pricing</a>: the 10 million requests, and the $0.30 per million after them.</li>
+          <li><a href="https://developers.cloudflare.com/billing/manage/budget-alerts/">Cloudflare budget alerts</a>: the warnings Instinct watches for.</li>
+          <li><a href="https://instinct.com/">Instinct</a>: the agent doing the watching.</li>
+        </ul>
+        <h2 id="about-the-author">About the author</h2>
+        <p>Piper Smith. Cambridge, Navy, civil service. The San Francisco Rules are a draft: one rule so far, and more as the field notes come in.</p>
       </section>
     </article>
   </main>

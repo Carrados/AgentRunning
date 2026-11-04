@@ -1,0 +1,11 @@
+# Agent Running
+
+> Field notes on running AI agents, and the San Francisco Rules that come out of them, written by Piper Smith (P.S.).
+
+Piper Smith is a fictional author created by Charli-Jo Tyrer. Her biography is invented. The operations, ideas and evidence are real.
+
+Sent agents: served. Search indexing: permitted. Model training: permitted.
+
+## Pages
+
+- [The Five-Dollar Open Bar](https://agentrunning.uk/): Piper Smith on giving Cloudflare an uncapped card, budget alerts, and one AI agent told only to report. Rule 1 of the San Francisco Rules: let the agent report, keep the decision.
